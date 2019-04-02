@@ -1,6 +1,6 @@
 var express = require('express');
 var app = express();
-const config = require('./Config/config');
+const config = require('./config/config');
 const path = require('path');
 
 app.listen(config.port);
