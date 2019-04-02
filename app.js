@@ -7,10 +7,14 @@ app.listen(process.env.PORT || config.port);
 console.log(`Node server is running in port ${config.port}`);
 app.use(express.static(path.join(__dirname, 'public')))
 
-app.get('/manager', (req, res) => {
-   res.redirect('/manager.html');
+app.get('/', (req, res) => {
+   res.redirect('/driver.html');
 });
 
 app.get('/driver', (req, res) => {
    res.redirect('/driver.html');
+});
+
+app.get('/manager', (req, res) => {
+   res.redirect('/manager.html');
 });
